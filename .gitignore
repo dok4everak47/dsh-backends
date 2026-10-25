@@ -1,0 +1,8 @@
+# pnpm's store links and per-plugin dependency trees
+node_modules/
+
+# Build output is committed on purpose: `dst` loads dist/ straight through the
+# link: dependencies, so a checkout without a build step still runs.
+
+.DS_Store
+*.log

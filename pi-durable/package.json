@@ -1,0 +1,34 @@
+{
+  "name": "@dok4ever/dsh-backend-pi",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "description": "dsh-tui backend that runs the @earendil-works/pi-durable harness as a Pi agent (DeepSeek via magpie).",
+  "main": "dist/register.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@earendil-works/chord": "1.0.4",
+    "@earendil-works/pi-ai": "1.0.4",
+    "@earendil-works/pi-durable": "1.0.4"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-harness-tui/dsh-tui": ">=0.16.1"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}

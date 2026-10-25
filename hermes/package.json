@@ -1,0 +1,29 @@
+{
+  "name": "@dok4ever/dsh-backend-hermes",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "description": "dsh-tui backend that drives Hermes (hermes-acp) as a DeepSeek terminal and browses existing Hermes sessions.",
+  "main": "dist/register.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-harness-tui/dsh-tui": ">=0.16.1"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "smoke": "node --experimental-strip-types scripts/smoke.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://dsh-tui-ecosystem.github.io/dsh-plugin-0.15.schema.json",
+  "manifestVersion": "0.15",
+  "id": "dok4ever.hermes-backend",
+  "name": "Hermes ACP Backend for dsh-tui",
+  "version": "0.1.0",
+  "facets": {
+    "host": {
+      "entry": "./dist/register.js",
+      "apiVersion": "v1alpha1"
+    }
+  },
+  "requires": {
+    "contracts": [
+      { "apiVersion": "tui.dsh/v1alpha1", "kind": "Backend" }
+    ]
+  },
+  "permissions": [],
+  "contributes": {
+    "commands": [],
+    "x-dsh-tui": [
+      {
+        "kind": "Backend",
+        "apiVersion": "tui.dsh/v1alpha1",
+        "id": "hermes",
+        "name": "hermes",
+        "spec": {
+          "id": "hermes",
+          "label": { "text": "Hermes (DeepSeek)" },
+          "shortLabel": "Hermes",
+          "capabilities": ["models"],
+          "grants": []
+        }
+      }
+    ]
+  },
+  "subscriptions": []
+}
