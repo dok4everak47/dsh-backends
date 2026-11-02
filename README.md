@@ -1,9 +1,11 @@
 # dsh-backends
 
 Three dsh-tui backend plugins, each an `@dok4ever/dsh-backend-*` package the
-`dsh-tui` profile links in through `link:` dependencies. They are private to
-this machine's setup: nothing here is published, and none of it is offered
-upstream.
+`dsh-tui` profile links in through `link:` dependencies.
+
+They are community plugins for the dsh ecosystem — not part of DeepSeek's
+official repository, and not offered upstream (DeepSeek Harness does not accept
+external pull requests).
 
 | Folder | Package | Backend id | Drives |
 | --- | --- | --- | --- |
